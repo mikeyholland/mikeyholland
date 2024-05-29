@@ -3,6 +3,8 @@ import React from 'react';
 import localFont from 'next/font/local';
 import './globals.css';
 
+import SmoothScrolling from './components/SmoothScrolling';
+
 const satoshi = localFont({
   src: [
     {
@@ -41,7 +43,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={satoshi.className}>{children}</body>
+      <body className={satoshi.className}>
+        <SmoothScrolling>{children}</SmoothScrolling>
+      </body>
     </html>
   );
 }

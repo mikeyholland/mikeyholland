@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --color-black: 0, 0, 0;
-  --color-white: 255, 255, 255;
+  --color-black: 0 0 0;
+  --color-white: 255 255 255;
 
-  --color-eerie-black: 28, 35, 33;
-  --color-honeydew: 241, 250, 238;
-  --color-paynes-gray: 94, 101, 114;
-  --color-persian-green: 0, 168, 150;
-  --color-burnt-umber: 140, 39, 30;
+  --color-eerie-black: 28 35 33;
+  --color-honeydew: 241 250 238;
+  --color-paynes-gray: 94 101 114;
+  --color-persian-green: 0 168 150;
+  --color-burnt-umber: 140 39 30;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-black: 255, 255, 255;
-    --color-white: 0, 0, 0;
+    --color-black: 255 255 255;
+    --color-white: 0 0 0;
 
-    --color-eerie-black: 227, 220, 222;
-    --color-honeydew: 14, 5, 17;
-    --color-paynes-gray: 161, 154, 141;
-    --color-persian-green: 255, 87, 105;
-    --color-burnt-umber: 115, 216, 225;
+    --color-eerie-black: 227 220 222;
+    --color-honeydew: 14 5 17;
+    --color-paynes-gray: 161 154 141;
+    --color-persian-green: 255 87 105;
+    --color-burnt-umber: 115 216 225;
   }
 }
 
@@ -34,4 +34,25 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

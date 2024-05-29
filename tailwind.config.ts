@@ -7,13 +7,17 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    extend: {},
+    colors: {
+      black: 'rgb(var(--color-black) / <alpha-value>)',
+      white: 'rgb(var(--color-white) / <alpha-value>)',
+      eerieBlack: 'rgb(var(--color-eerie-black) / <alpha-value>)',
+      honeydew: 'rgb(var(--color-honeydew) / <alpha-value>)',
+      paynesGray: 'rgb(var(--color-paynes-gray) / <alpha-value>)',
+      persianGreen: 'rgb(var(--color-persian-green) / <alpha-value>)',
+      burntUmber: 'rgb(var(--color-burnt-umber) / <alpha-value>)',
     },
+    fontFamily: {},
   },
   plugins: [],
 };
