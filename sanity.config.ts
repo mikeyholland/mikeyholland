@@ -8,6 +8,8 @@ import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 import { muxInput } from 'sanity-plugin-mux-input';
+import { vercelDeployTool } from 'sanity-plugin-vercel-deploy';
+
 // import { inlineSvgInput } from '@focus-reactive/sanity-plugin-inline-svg-input';
 
 import { structure } from './structure';
@@ -48,5 +50,6 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
     muxInput(),
+    vercelDeployTool(),
   ],
 });
