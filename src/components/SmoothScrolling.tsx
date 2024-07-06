@@ -1,26 +1,18 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
+import React from 'react';
+import { ReactLenis } from '@studio-freight/react-lenis';
 
 export default function SmoothScrolling({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const lenis = useLenis();
-
-  useEffect(() => {
-    if (lenis) {
-      lenis.scrollTo(0);
-    }
-  }, [lenis]);
-
   return (
     <ReactLenis
       root
       options={{
-        duration: 1.5,
+        duration: 2,
         orientation: 'vertical',
       }}
     >

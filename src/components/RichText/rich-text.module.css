@@ -1,0 +1,27 @@
+.richText > h1 {
+  @apply mb-4 font-bold;
+}
+
+.richText > h2 {
+  @apply mb-4 font-bold;
+}
+
+.richText > h3 {
+  @apply mb-4 font-bold;
+}
+
+.richText > h4 {
+  @apply mb-2 font-bold;
+}
+
+.richText > p {
+  @apply mb-4;
+}
+
+.richText a {
+  @apply underline;
+}
+
+.richText > ul {
+  @apply list-disc list-inside;
+}

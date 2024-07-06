@@ -5,6 +5,7 @@
 :root {
   --color-black: 0 0 0;
   --color-white: 255 255 255;
+  --color-gray: 128 128 128;
 
   --color-eerie-black: 28 35 33;
   --color-honeydew: 241 250 238;
@@ -17,6 +18,7 @@
   :root {
     --color-black: 255 255 255;
     --color-white: 0 0 0;
+    --color-gray: 128 128 128;
 
     --color-eerie-black: 227 220 222;
     --color-honeydew: 14 5 17;
@@ -55,4 +57,9 @@ html.lenis body {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+::selection {
+  background: teal;
+  color: yellow;
 }

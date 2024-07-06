@@ -1,29 +1,29 @@
 import type { Metadata } from 'next';
 import React from 'react';
 import localFont from 'next/font/local';
-import './globals.css';
-
-import SmoothScrolling from './components/SmoothScrolling';
+import Providers from '@components/Providers';
+import Background from '@components/Background';
+import '../globals.css';
 
 const satoshi = localFont({
   src: [
     {
-      path: './assets/fonts/Satoshi-Regular.woff2',
+      path: '../assets/fonts/Satoshi-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './assets/fonts/Satoshi-Italic.woff2',
+      path: '../assets/fonts/Satoshi-Italic.woff2',
       weight: '400',
       style: 'italic',
     },
     {
-      path: './assets/fonts/Satoshi-Bold.woff2',
+      path: '../assets/fonts/Satoshi-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: './assets/fonts/Satoshi-BoldItalic.woff2',
+      path: '../assets/fonts/Satoshi-BoldItalic.woff2',
       weight: '700',
       style: 'italic',
     },
@@ -43,8 +43,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={satoshi.className}>
-        <SmoothScrolling>{children}</SmoothScrolling>
+        <Providers>
+          <Background>{children}</Background>
+        </Providers>
       </body>
     </html>
   );
