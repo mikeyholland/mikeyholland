@@ -1,16 +1,22 @@
-function clamp(min, input, max) {
+function clamp(min: number, input: number, max: number) {
   return Math.max(min, Math.min(input, max));
 }
 
-function mapRange(in_min, in_max, input, out_min, out_max) {
-  return ((input - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+function mapRange(
+  inMin: number,
+  inMax: number,
+  input: number,
+  outMin: number,
+  outMax: number,
+) {
+  return ((input - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 }
 
-function lerp(x, y, t) {
+function lerp(x: number, y: number, t: number) {
   return (1 - t) * x + t * y;
 }
 
-function truncate(value, decimals) {
+function truncate(value: number, decimals: number) {
   return parseFloat(value.toFixed(decimals));
 }
 
