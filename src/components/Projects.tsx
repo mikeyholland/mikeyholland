@@ -4,8 +4,6 @@ import 'swiper/css';
 
 import { sanityFetch } from '../../sanity/client';
 import Project, { ProjectType } from './Project';
-import Video from './VideoServer';
-import VideoBorder from './VideoBorder';
 
 const PROJECTS_QUERY = `
   *[_type == "project"]| order(orderRank){
