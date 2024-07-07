@@ -7,6 +7,7 @@ import clsx from 'clsx';
 // import { createBlurUp } from '@mux/blurup';
 
 import { TextContext } from 'src/app/context/textContext';
+import MuxPlayerStyles from './video.module.css';
 
 interface videoType {
   playbackId: string;
@@ -44,10 +45,13 @@ export default function Video({ video }: { video: videoType }) {
           muted
           autoPlay
           streamType="live"
-          style={{
-            '--controls': 'none',
-          }}
-          className="w-full h-44 md:h-64 lg:h-96"
+          // style={{
+          //   '--controls': 'none',
+          // }}
+          className={clsx(
+            MuxPlayerStyles.muxPlayer,
+            'w-full h-44 md:h-64 lg:h-96',
+          )}
           onLoadedData={() => videoLoaded()}
           // placeholder={blurDataURL}
           // style={{ aspectRatio }}

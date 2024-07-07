@@ -22,7 +22,7 @@ export default async function Video({ video }: { video: videoType }) {
       streamType="live"
       className="w-full h-44 md:h-64 lg:h-96"
       placeholder={blurDataURL}
-      style={{ aspectRatio, '--controls': 'none' }}
+      style={{ aspectRatio }}
     />
   );
 }
