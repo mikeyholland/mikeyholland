@@ -19,9 +19,7 @@ export const Section = forwardRef<HTMLElement, SectionType>(
     const { setBgColor } = useContext(BgContext);
     const { setTextColor } = useContext(TextContext);
     const bgRef = useRef<HTMLDivElement>(null);
-    const isInView = useInView(bgRef, {
-      amount: 0.5,
-    });
+    const isInView = useInView(bgRef);
 
     useEffect(() => {
       if (isInView) {
