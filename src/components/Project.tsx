@@ -135,7 +135,7 @@ const Project = ({ project }: { project: ProjectType }) => {
             </a>
           </div>
         </motion.div>
-        <div className="lg:w-2/3 overflow-hidden relative">
+        <div className="lg:w-2/3">
           <Swiper
             slidesPerView="auto"
             modules={[FreeMode]}
