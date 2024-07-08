@@ -4,7 +4,6 @@ import React, { useState, useContext } from 'react';
 import MuxPlayer from '@mux/mux-player-react/lazy';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
-// import { createBlurUp } from '@mux/blurup';
 
 import { TextContext } from 'src/app/context/textContext';
 import MuxPlayerStyles from './video.module.css';
@@ -15,11 +14,6 @@ interface videoType {
 }
 
 export default function Video({ video }: { video: videoType }) {
-  // const { blurDataURL, aspectRatio } = await createBlurUp(
-  //   video?.playbackId,
-  //   {},
-  // );
-
   const [videoLoading, setVideoLoading] = useState<boolean>(true);
   const [pulsing, setPulsing] = useState<boolean>(true);
   const { textColor } = useContext(TextContext);
@@ -45,16 +39,11 @@ export default function Video({ video }: { video: videoType }) {
           muted
           autoPlay
           streamType="live"
-          // style={{
-          //   '--controls': 'none',
-          // }}
           className={clsx(
             MuxPlayerStyles.muxPlayer,
-            'w-full h-44 md:h-64 lg:h-96',
+            'w-full h-36 xs:h-44 md:h-64 lg:h-96',
           )}
           onLoadedData={() => videoLoaded()}
-          // placeholder={blurDataURL}
-          // style={{ aspectRatio }}
         />
         <motion.div
           className="bg-gray absolute inset-0"
