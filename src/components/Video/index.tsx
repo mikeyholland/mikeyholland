@@ -17,6 +17,9 @@ export default function Video({ video }: { video: videoType }) {
   const [videoLoading, setVideoLoading] = useState<boolean>(true);
   const [pulsing, setPulsing] = useState<boolean>(true);
   const { textColor } = useContext(TextContext);
+  // const aspectRatioString = video.data.aspect_ratio;
+  // const aspectRatioArray = aspectRatioString.split(':');
+  // const aspectRatio = `${aspectRatioArray[0]} / ${aspectRatioArray[1]} `;
 
   const videoLoaded = () => {
     setVideoLoading(false);
@@ -32,7 +35,7 @@ export default function Video({ video }: { video: videoType }) {
         textColor === 'Black' ? 'bg-eerieBlack' : 'bg-white',
       )}
     >
-      <div className="relative bg-eerieBlack md:min-w-24 flex items-center">
+      <div className="relative bg-eerieBlack md:min-w-24 h-36 xs:h-44 md:h-64 lg:h-96 flex items-center">
         <MuxPlayer
           playbackId={video?.playbackId}
           loop

@@ -8,12 +8,6 @@ import Project, { ProjectType } from './Project';
 const PROJECTS_QUERY = `
   *[_type == "project"]| order(orderRank){
     ...,
-    videos[] {
-      asset-> {
-        playbackId,
-        assetId,
-      }
-    },
     'videosWithLabels': videosWithLabels[] {
       _type == 'reference' => @-> {
         ...,
@@ -21,6 +15,9 @@ const PROJECTS_QUERY = `
           asset-> {
             playbackId,
             assetId,
+            data {
+              ...,
+            }
           }
         }
       }
