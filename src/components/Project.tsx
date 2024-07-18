@@ -85,7 +85,6 @@ const Project = ({ project }: { project: ProjectType }) => {
       <motion.div
         initial="hidden"
         animate={ctrls}
-        aria-hidden="true"
         transition={{
           delayChildren: 0.25,
           staggerChildren: 0.35,
